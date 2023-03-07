@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from "react";
 import { Box, IconButton, useTheme } from "@mui/material";
 import { useContext } from "react";
@@ -18,7 +19,7 @@ const TopBar = (props: Props) => {
   const colorMode = useContext(ColorModeContext);
 
   return (
-    <Box className="flex justify-between p-2 border-black border">
+    <Box className="flex justify-between p-2">
       <Box className="flex rounded-sm" backgroundColor={colors.primary[400]}>
         <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search" />
         <IconButton>
