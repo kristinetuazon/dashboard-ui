@@ -9,9 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "@fullcalendar/core": "^6.1.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "@material-ui/types": "^5.1.0",
+    "@mui/icons-material": "^5.11.11",
+    "@mui/material": "^5.11.9",
+    "@types/material-ui": "^0.21.12",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "react-router-dom": "^6.8.1"
   },
   "devDependencies": {
