@@ -20,7 +20,7 @@ const TopBar = (props: Props) => {
 
   return (
     <Box className="flex justify-between p-2">
-      <Box className="flex rounded-sm" backgroundColor={colors.primary[400]}>
+      <Box className="flex rounded-sm w-[300px]" backgroundColor={colors.primary[400]}>
         <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search" />
         <IconButton>
           <Search />

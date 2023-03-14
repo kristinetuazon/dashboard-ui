@@ -16,7 +16,7 @@ import Dashboard from './scenes/Dashboard';
 // import FAQ from './scenes/FAQ';
 // import Geography from './scenes/Geography';
 // import Calendar from './scenes/Calendar';
-
+import { ProSidebarProvider } from 'react-pro-sidebar';
 
 function App() {
  const [theme , colorMode ] =  useMode();
@@ -25,6 +25,7 @@ function App() {
     <ColorModeContext.Provider value={colorMode}>
     <ThemeProvider theme={theme}>
       <CssBaseline/>
+      <ProSidebarProvider>
     <div className="app">
       <main className="content">
         <TopBar/>
@@ -43,6 +44,7 @@ function App() {
         </Routes>
       </main>
     </div>
+    </ProSidebarProvider>
     </ThemeProvider>
     </ColorModeContext.Provider>
   )
