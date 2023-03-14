@@ -16,20 +16,20 @@ import Dashboard from './scenes/Dashboard';
 // import FAQ from './scenes/FAQ';
 // import Geography from './scenes/Geography';
 // import Calendar from './scenes/Calendar';
-import { ProSidebarProvider } from 'react-pro-sidebar';
+ import { ProSidebarProvider } from 'react-pro-sidebar';
 
 function App() {
  const [theme , colorMode ] =  useMode();
 
   return (
+    <ProSidebarProvider>
     <ColorModeContext.Provider value={colorMode}>
     <ThemeProvider theme={theme}>
+        <TopBar/>
+      <SideBar/>
       <CssBaseline/>
-      <ProSidebarProvider>
     <div className="app">
       <main className="content">
-        <TopBar/>
-        <SideBar/>
         <Routes>
           <Route path="/" element={<Dashboard/>}/>
           {/* <Route path="/contacts" element={<Contacts/>}/>
@@ -40,13 +40,13 @@ function App() {
           <Route path="/line" element={<Line/>}/>
           <Route path="/faq" element={<FAQ/>}/>
           <Route path="/geography" element={<Geography/>}/>
-          <Route path="/calendar" element={<Calendar/>}/> */}
+          <Route path="/calendar" e®lement={<Calendar/>}/> */}
         </Routes>
       </main>
     </div>
-    </ProSidebarProvider>
     </ThemeProvider>
     </ColorModeContext.Provider>
+    </ProSidebarProvider>
   )
 }
 
