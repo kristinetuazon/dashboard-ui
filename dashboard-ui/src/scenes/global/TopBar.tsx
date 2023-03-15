@@ -10,8 +10,10 @@ import { NotificationsOutlined } from "@mui/icons-material";
 import { SettingsOutlined } from "@mui/icons-material";
 import { PersonOutlineOutlined } from "@mui/icons-material";
 import { Search } from "@mui/icons-material";
+import "./TopBar.css"
 
-type Props = {};
+type Props = {
+};
 
 const TopBar = (props: Props) => {
   const theme = useTheme();
@@ -19,6 +21,7 @@ const TopBar = (props: Props) => {
   const colorMode = useContext(ColorModeContext);
 
   return (
+    <div className="topbar">
     <Box className="flex justify-between p-2">
       <Box className="flex rounded-sm w-[300px]" backgroundColor={colors.primary[400]}>
         <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search" />
@@ -41,6 +44,8 @@ const TopBar = (props: Props) => {
         </IconButton>
       </Box>
     </Box>
+    </div>
+
   );
 };
 

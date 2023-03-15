@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, FormEvent } from "react";
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 // import 'react-pro-sidebar/dist/css/sidebar.css'
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
@@ -18,10 +18,14 @@ import { PieChartOutline } from "@mui/icons-material";
 import { TimelineOutlined } from "@mui/icons-material";
 import { MenuOutlined } from "@mui/icons-material";
 import { MapOutlined } from "@mui/icons-material";
+import "./SideBar.css"
 
-type Props = {};
+type Props = {
+  children?: JSX.Element | JSX.Element[];
+};
 
 const SideBar = (props: Props) => {
+  const { children } = props;
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useState<boolean>(false);
@@ -47,6 +51,7 @@ const SideBar = (props: Props) => {
   };
 
   return (
+    <div className="sideBar">
     <Box
       sx={{
         "& .pro-sidebar-inner": {
@@ -224,6 +229,7 @@ const SideBar = (props: Props) => {
         </Menu>
       </Sidebar>
     </Box>
+    </div>
   );
 };
 

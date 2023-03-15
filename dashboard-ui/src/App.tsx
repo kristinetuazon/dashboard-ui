@@ -17,6 +17,7 @@ import Dashboard from './scenes/Dashboard';
 // import Geography from './scenes/Geography';
 // import Calendar from './scenes/Calendar';
  import { ProSidebarProvider } from 'react-pro-sidebar';
+ import Layout from './components/Layout';
 
 function App() {
  const [theme , colorMode ] =  useMode();
@@ -25,11 +26,10 @@ function App() {
     <ProSidebarProvider>
     <ColorModeContext.Provider value={colorMode}>
     <ThemeProvider theme={theme}>
-        <TopBar/>
-      <SideBar/>
       <CssBaseline/>
     <div className="app">
       <main className="content">
+        <Layout>
         <Routes>
           <Route path="/" element={<Dashboard/>}/>
           {/* <Route path="/contacts" element={<Contacts/>}/>
@@ -42,6 +42,7 @@ function App() {
           <Route path="/geography" element={<Geography/>}/>
           <Route path="/calendar" e®lement={<Calendar/>}/> */}
         </Routes>
+        </Layout>
       </main>
     </div>
     </ThemeProvider>
