@@ -1,6 +1,7 @@
-import React from "react";
+import React,{useState} from "react";
 import SideBar from "../scenes/global/SideBar";
 import TopBar from "../scenes/global/TopBar";
+import { Box } from "@mui/material";
 
 type Props = { children: JSX.Element };
 
@@ -9,8 +10,10 @@ const Layout = (props: Props) => {
 
   return (
     <div>
+    <Box sx={{display:"flex", flexDirection:"row",}}>
       <TopBar/>
-        <SideBar/>
+    <SideBar/>
+    </Box>
         {children}
 
     
