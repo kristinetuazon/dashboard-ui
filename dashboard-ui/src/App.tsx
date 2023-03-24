@@ -5,6 +5,7 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Routes, Route } from "react-router-dom";
 import TopBar from "./scenes/global/TopBar";
 import SideBar from "./scenes/global/SideBar";
+import { useState } from "react";
 import Dashboard from "./scenes/Dashboard";
 // import Team from './scenes/Team';
 // import Invoices from './scenes/Invices';
@@ -17,7 +18,6 @@ import Dashboard from "./scenes/Dashboard";
 // import Geography from './scenes/Geography';
 // import Calendar from './scenes/Calendar';
 //  import { ProSidebarProvider } from 'react-pro-sidebar';
-import Layout from "./components/Layout";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -27,11 +27,10 @@ function App() {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <SideBar isSidebar={isSidebar} />
         <div className="app">
+        <SideBar isSidebar={isSidebar} />
           <main className="content">
             <TopBar setIsSidebar={setIsSidebar} />
-
             <Routes>
               <Route path="/" element={<Dashboard />} />
               {/* <Route path="/contacts" element={<Contacts/>}/>
