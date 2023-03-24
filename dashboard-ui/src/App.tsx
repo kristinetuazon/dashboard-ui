@@ -6,7 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import TopBar from "./scenes/global/TopBar";
 import SideBar from "./scenes/global/SideBar";
 import { useState } from "react";
-import Dashboard from "./scenes/Dashboard";
+import Dashboard from "./scenes/dashboard/Dashboard";
 // import Team from './scenes/Team';
 // import Invoices from './scenes/Invices';
 // import Contact from './scenes/Contact';
