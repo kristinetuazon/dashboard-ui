@@ -8,12 +8,12 @@ import Header from "../../components/Header";
 
 type Props = {};
 
-const Team = (props: Props) => {
+const Contacts = (props: Props) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   const columns = [
-    { field: "id", headerName: "ID", flex:"0.5" },
+    { field: "id", headerName: "ID", flex: 0.5 },
     { field: "registrarId", headerName: "Registrar ID" },
     {
       field: "name",
@@ -26,8 +26,6 @@ const Team = (props: Props) => {
       headerName: "Age",
       flex: 1,
       type: "number",
-      align: "left",
-      headerAlign: "left",
     },
     {
       field: "phone",
@@ -44,15 +42,25 @@ const Team = (props: Props) => {
       headerName: "Address",
       flex: 1,
     },
+    {
+      field: "city",
+      headerName: "City",
+      flex: 1,
+    },
+    {
+      field: "zipCode",
+      headerName: "Zip Code",
+      flex: 1,
+    },
   ];
 
   return (
     <Box m="20px">
       <Box display="flex">
-        <Header title="TEAM" subtitle="Team management"></Header>
+        <Header title="CONTACTS" subtitle="List of Contacts for Future Reference"></Header>
       </Box>
       <Box
-      m="40px 0 0 0"
+      m="10px 0 0 0"
       height="75vh"
       sx={{
         "& .MuiDataGrid-root": {
@@ -74,13 +82,16 @@ const Team = (props: Props) => {
         "& .MuiDataGrid-footerContainer":{
           backgroundColor: colors.blueAccent[700],
           borderColor: "none"
-        }
+        },
+        "& .MuiDataGrid-toolbarContainer .MuiButton-text":{
+          color: `${[colors.grey[100]]} !important`
+      }
       }}
       >
-      <DataGrid rows={mockDataContacts} columns={columns} />
+      <DataGrid rows={mockDataContacts} columns={columns} components={{Toolbar: GridToolbar}}/>
       </Box>
     </Box>
   );
 };
 
-export default Team;
+export default Contacts;
