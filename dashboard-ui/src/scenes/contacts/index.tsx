@@ -1,11 +1,9 @@
 import React from "react";
-import { Box, Typography, useTheme } from "@mui/material";
-import { DataGrid } from "@mui/x-data-grid";
+import { Box, useTheme } from "@mui/material";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
-import { mockDataTeam } from "../../data/mockData";
-import { AdminPanelSettingsOutlined } from "@mui/icons-material";
-import { LockOpenOutlined } from "@mui/icons-material";
-import { SecurityOutlined } from "@mui/icons-material";
+import { mockDataContacts } from "../../data/mockData";
+
 import Header from "../../components/Header";
 
 type Props = {};
@@ -15,12 +13,21 @@ const Team = (props: Props) => {
   const colors = tokens(theme.palette.mode);
 
   const columns = [
-    { field: "id", headerName: "ID" },
+    { field: "id", headerName: "ID", flex:"0.5" },
+    { field: "registrarId", headerName: "Registrar ID" },
     {
       field: "name",
       headerName: "Name",
       flex: 1,
       cellClassName: "name-column--cell",
+    },
+    {
+      field: "age",
+      headerName: "Age",
+      flex: 1,
+      type: "number",
+      align: "left",
+      headerAlign: "left",
     },
     {
       field: "phone",
@@ -33,32 +40,9 @@ const Team = (props: Props) => {
       flex: 1,
     },
     {
-      field: "access",
-      headerName: "Access Level",
+      field: "address",
+      headerName: "Address",
       flex: 1,
-      renderCell: ({ row: { access } }) => {
-        return (
-          <Box
-            width="60%"
-            m="0 auto"
-            p="5px"
-            display="flex"
-            justifyContent="center"
-            backgroundColor={
-              access === "admin"
-                ? colors.greenAccent[500]
-                : colors.greenAccent[700]
-            }
-          >
-            {access === "admin" && <AdminPanelSettingsOutlined />}
-            {access === "manager" && <SecurityOutlined />}
-            {access === "user" && <LockOpenOutlined />}
-            <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
-              {access}
-            </Typography>
-          </Box>
-        );
-      },
     },
   ];
 
@@ -93,7 +77,7 @@ const Team = (props: Props) => {
         }
       }}
       >
-      <DataGrid rows={mockDataTeam} columns={columns} />
+      <DataGrid rows={mockDataContacts} columns={columns} />
       </Box>
     </Box>
   );
