@@ -36,8 +36,9 @@ const Team = (props: Props) => {
       field: "access",
       headerName: "Access Level",
       flex: 1,
-      renderCell: ({ row: { access } }) => {
+      renderCell: ({ row: { access } }:any) => {
         return (
+          // @ts-ignore
           <Box
             width="60%"
             m="0 auto"
@@ -68,7 +69,7 @@ const Team = (props: Props) => {
         <Header title="TEAM" subtitle="Team management"></Header>
       </Box>
       <Box
-      m="40px 0 0 0"
+      m="20px 0 0 0"
       height="75vh"
       sx={{
         "& .MuiDataGrid-root": {
