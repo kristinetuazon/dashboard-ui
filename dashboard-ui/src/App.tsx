@@ -10,8 +10,8 @@ import Dashboard from "./scenes/dashboard/Dashboard";
 import Team from "./scenes/team";
 import Contacts from "./scenes/contacts";
 import Invoices from "./scenes/invoices";
+import Form from "./scenes/form";
 // import Bar from './scenes/Bar';
-// import Form from './scenes/Form';
 // import Line from './scenes/Line';
 // import Pie from './scenes/Pie';
 // import FAQ from './scenes/FAQ';
@@ -28,16 +28,16 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
-        <SideBar isSidebar={isSidebar} />
+          <SideBar isSidebar={isSidebar} />
           <main className="content">
             <TopBar setIsSidebar={setIsSidebar} />
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/team" element={<Team />} />
-             <Route path="/contacts" element={<Contacts/>}/>
-           <Route path="/invoices" element={<Invoices/>}/>
-           {/*<Route path="/form" element={<Form/>}/>
-          <Route path="/bar" element={<Bar/>}/>
+              <Route path="/contacts" element={<Contacts />} />
+              <Route path="/invoices" element={<Invoices />} />
+              <Route path="/form" element={<Form />} />
+              {/* <Route path="/bar" element={<Bar/>}/>
           <Route path="/pie" element={<Pie/>}/>
           <Route path="/line" element={<Line/>}/>
           <Route path="/faq" element={<FAQ/>}/>
