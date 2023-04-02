@@ -13,11 +13,10 @@ import Invoices from "./scenes/invoices";
 import Form from "./scenes/form";
 import Calendar from "./scenes/calendar";
 import Bar from "./scenes/barchart";
-// import Line from './scenes/Line';
+import Line from "./scenes/linechart";
 import Pie from "./scenes/piechart";
+import Geography from './scenes/geography';
 // import FAQ from './scenes/FAQ';
-// import Geography from './scenes/Geography';
-//  import { ProSidebarProvider } from 'react-pro-sidebar';
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -40,9 +39,9 @@ function App() {
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/bar" element={<Bar />} />
               <Route path="/pie" element={<Pie />} />
-              {/*<Route path="/line" element={<Line/>}/>
-          <Route path="/faq" element={<FAQ/>}/>
-          <Route path="/geography" element={<Geography/>}/>*/}
+              <Route path="/line" element={<Line />} />
+              <Route path="/geography" element={<Geography />} />
+              {/* <Route path="/faq" element={<FAQ/>}/> */}
             </Routes>
           </main>
         </div>
