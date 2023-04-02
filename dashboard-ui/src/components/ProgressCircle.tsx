@@ -2,9 +2,12 @@ import React from "react";
 import { Box, useTheme } from "@mui/material";
 import { tokens } from "../theme";
 
-type Props = {};
+type Props = {
+  progress?: string;
+  size?: string;
+};
 
-const ProgressCircle = ({ progress = "0.75", size = "40" }) => {
+const ProgressCircle = ({ progress = "0.75", size = "40" }:Props) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const angle = Number(progress) * 350;

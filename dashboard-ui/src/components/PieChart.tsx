@@ -3,7 +3,11 @@ import { useTheme } from "@mui/material";
 import { tokens } from "../theme";
 import { mockPieData as data } from "../data/mockData";
 
-const PieChart = ({ isDashboard = false }) => {
+type Props = {
+  isDashboard: boolean;
+};
+
+const PieChart = ({ isDashboard = false }:Props) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
 
