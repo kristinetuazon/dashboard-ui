@@ -4,7 +4,7 @@ import { tokens } from "../theme";
 import { mockPieData as data } from "../data/mockData";
 
 type Props = {
-  isDashboard: boolean;
+  isDashboard?: boolean;
 };
 
 const PieChart = ({ isDashboard = false }:Props) => {

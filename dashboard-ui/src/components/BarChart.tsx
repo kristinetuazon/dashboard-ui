@@ -4,7 +4,7 @@ import { tokens } from "../theme";
 import { mockBarData as data } from "../data/mockData";
 
 type Props = {
-  isDashboard: boolean;
+  isDashboard?: boolean;
 };
 
 const BarChart = ({ isDashboard = false }: Props) => {

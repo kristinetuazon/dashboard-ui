@@ -5,7 +5,7 @@ import { mockGeographyData as data } from "../data/mockData";
 import { geoFeatures } from "../data/geoData";
 
 type Props = {
-  isDashboard: boolean;
+  isDashboard?: boolean;
 };
 
 const GeoChart = ({ isDashboard = false }:Props) => {
