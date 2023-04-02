@@ -41,7 +41,12 @@ const PieChart = ({ isDashboard = false }:Props) => {
             fill: colors.grey[100],
             
           }
-        }
+        },
+        tooltip: {
+          container: {
+            color: colors.grey[700],
+          },
+        },
       }}
       margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
       innerRadius={0.5}

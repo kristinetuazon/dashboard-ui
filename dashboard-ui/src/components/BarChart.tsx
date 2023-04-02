@@ -42,6 +42,11 @@ const BarChart = ({ isDashboard = false }: Props) => {
             fill: colors.grey[100],
           },
         },
+        tooltip: {
+          container: {
+            color: colors.grey[700],
+          },
+        },
       }}
       keys={["hot dog", "burger", "sandwich", "kebab", "fries", "donut"]}
       indexBy="country"

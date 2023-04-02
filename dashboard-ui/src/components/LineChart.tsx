@@ -43,7 +43,7 @@ const LineChart = ({ isDashboard = false }: Props) => {
         },
         tooltip: {
             container: {
-                color: colors.grey[100]
+                color: colors.grey[700]
         }
     }
       }}
