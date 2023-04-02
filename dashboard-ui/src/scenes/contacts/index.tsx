@@ -55,7 +55,7 @@ const Contacts = (props: Props) => {
   ];
 
   return (
-    <Box m="20px">
+    <Box m="5px">
       <Box display="flex">
         <Header title="CONTACTS" subtitle="List of Contacts for Future Reference"></Header>
       </Box>
