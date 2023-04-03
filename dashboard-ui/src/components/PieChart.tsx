@@ -116,5 +116,4 @@ const PieChart = ({ isDashboard = false }:Props) => {
     />
   );
 };
-
 export default PieChart;
