@@ -1,12 +1,13 @@
 import React from "react";
 import { Box, useTheme, Typography } from "@mui/material";
 import { tokens } from "../theme";
+import PropTypes from "prop-types";
 import ProgressCircle from "./ProgressCircle";
 
 type Props = {
   title?: string;
   subtitle?: string;
-  icon?: string;
+  icon?:  any;
   progress?: string;
   increase?: string;
 };
@@ -16,7 +17,7 @@ function StatBox({ title, subtitle, icon, progress, increase }: Props) {
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box width="100%" m="0 30px">
+    <Box width="100%" m="10px">
       <Box display="flex" justifyContent="space-between">
         <Box>
           {icon}
@@ -31,9 +32,9 @@ function StatBox({ title, subtitle, icon, progress, increase }: Props) {
           </Typography>
         </Box>
         <Box>
-          <ProgressCircle progress={progress} />
+          <ProgressCircle progress={progress} size="40"/>
         </Box>
-        <Box display="flex" justifyContent="space-between">
+        <Box display="flex" flexDirection="column" justifyContent="space-between">
           <Typography
             variant="h5"
             sx={{
